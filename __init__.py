@@ -1,3 +1,6 @@
+from pykeepass import PyKeePass
+
+
 class KDBXDataBase:
     def __init__(self, name, groups=None) -> None:
         self.name = name
