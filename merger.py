@@ -27,10 +27,10 @@ def _merge_recursively(read_group, write_group, merged_db):
                 write_entry.mtime = read_entry.mtime
                 write_entry.ctime = read_entry.ctime
                 write_entry.notes = read_entry.notes or ""
-        else:
+        elif read_entry.title:
             write_entry = merged_db.add_entry(
                 write_group,
-                read_entry.title or "",
+                read_entry.title,
                 read_entry.username or "",
                 read_entry.password or ""
             )
